@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_design_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Design
+  <% end %>
+  <h1>Listing designs</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @designs) do |design| %>
+            <td><%= design.name %></td>
+            <td><%= design.price %></td>
+            <td><%= design.description %></td>
+            <td><%= link_to 'Show', design %></td>
+        <td><%= link_to 'Edit', edit_design_path(design) %></td>
+        <td><%= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

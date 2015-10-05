@@ -1,0 +1,22 @@
+
+  <div class="store">Merab Store</div>
+
+<%@store.each do |s| %>
+      <div class=" row main">
+        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6  info">
+          <div class="name"><%= s.name %></div>
+          <div class="description"> <%= s.description %></div>
+          <div class="price">Price: <%= s.price %></div>
+        </div>
+     <div class=" col-lg-6 col-md-6 col-sm-6 hidden-xs img">
+       <span class="pull-right">
+      <%=image_tag s.avatar(:thumb) %>
+           </span>
+     </div>
+        <div class=" hidden-lg hidden-md hidden-sm img ">
+          <span class="pull-right">
+          <%=image_tag s.avatar(:thumb) %>
+              </span>
+        </div>
+      </div>
+  <%end %>
