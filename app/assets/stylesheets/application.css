@@ -13,47 +13,47 @@
  *= require_tree .
  *= require_self
  */
-body{
-    background: url(bg.png) fixed ;
+body {
 
-}
-.img{
-    padding: 10px;
-
-
+    background: #558892 fixed;
 }
 
-
-.cont{
-    background: white;
-}
-.info{
+.img {
     padding: 10px;
 
 }
 
-.name{
+.info {
+    padding: 10px;
+
+}
+
+.name {
     font-size: 24px;
     font-weight: bold;
     text-transform: capitalize;
     color: #444444;
     text-shadow: 4px 4px 4px rgba(150, 150, 150, 1);
 }
-.description{
+
+.description {
     color: #444444;
     font-size: 18px;
 }
-.main  {
-    background: white;
+
+.main {
+    background: #76bac4;
     margin-bottom: 1px;
     -webkit-box-shadow: 0px 0px 18px -2px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    0px 0px 18px -2px rgba(50, 50, 50, 0.75);
-    box-shadow:         0px 0px 18px -2px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 18px -2px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 8px -2px rgba(50, 50, 50, 0.75);
 }
- .store{
-     font-size: 40px;
-     text-shadow: 4px 4px 4px rgb(212, 212, 212);
-     text-align: center;
-     font-weight: bold;
-     color: #b0b0b0;
- }
+
+.store {
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 0px 3px 10px rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    color: #558892;
+}

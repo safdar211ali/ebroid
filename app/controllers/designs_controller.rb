@@ -1,4 +1,5 @@
 class DesignsController < ApplicationController
+  layout 'admin'
   before_action :set_design, only: [:show, :edit, :update, :destroy]
 
   # GET /designs
