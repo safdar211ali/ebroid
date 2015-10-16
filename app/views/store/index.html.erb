@@ -1,22 +1,37 @@
+<div class="store">Merab Store</div>
 
-  <div class="store">Merab Store</div>
-
-<%@store.each do |s| %>
-      <div class=" row main">
-        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6  info">
-          <div class="name"><%= s.name %></div>
-          <div class="description"> <%= s.description %></div>
-          <div class="price">Price: <%= s.price %></div>
-        </div>
-     <div class=" col-lg-6 col-md-6 col-sm-6 hidden-xs img">
-       <span class="pull-right">
-      <%=image_tag s.avatar(:thumb) %>
-           </span>
-     </div>
-        <div class=" hidden-lg hidden-md hidden-sm img ">
-          <span class="pull-right">
-          <%=image_tag s.avatar(:thumb) %>
-              </span>
-        </div>
+<% @store.each do |s| %>
+    <div class=" row main">
+      <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6  info">
+        <div class="name"><%= s.name %></div>
+        <div class="description"> <%= s.description %></div>
+        <div class="price">Price: <%= s.price %></div>
       </div>
-  <%end %>
+      <div class=" col-lg-6 col-md-6 col-sm-6 hidden-xs img ">
+        <%=link_to image_tag(s.avatar(:thumb)) ,store_path(s) , class: 'thumbnail pull-right ', "data-toggle" => "modal", "data-target" => "#exampleModal",remote:true %>
+      </div>
+    </div>
+<% end %>
+
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <div id="show"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
